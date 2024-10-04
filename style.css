@@ -1368,11 +1368,37 @@ ul {
 
 .book-appointment-content {
   display: flex;
+}
+
+.step1 {
+  display: flex;
+}
+.step2 {
+  display: none;
+}
+
+.desclaimer-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: gray;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.step1,
+.step2 {
   flex-direction: column;
   background-color: white;
   border-radius: 2rem;
   padding: 1rem 3rem;
   position: relative;
+}
+
+.step2 form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
 }
 
 .book-appointment-content h1 {
@@ -1408,6 +1434,20 @@ ul {
   color: rgba(94, 94, 94, 1);
 }
 
+.step2 button {
+  width: auto;
+  border: 2px solid rgba(176, 176, 176, 1);
+  border-radius: 2rem;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: rgba(160, 160, 160, 1);
+}
+
 .book-appointment-form input::placeholder {
   font-weight: 500;
   color: rgba(160, 160, 160, 1);
@@ -1416,19 +1456,19 @@ ul {
 .otp-input {
   position: relative;
   display: flex;
-  width: auto;
+  width: 100%;
 }
-.otp-input-input {
-  width: 20rem;
+.otp-input input {
+  width: 100%;
 }
 
 .otp-varify {
   position: absolute;
-  right: -0.5rem;
+  right: 1px;
   top: 1px;
   bottom: 1px;
   font-size: 1rem;
-  width: 10rem;
+  width: 6rem;
   background-color: rgba(248, 148, 63, 1);
   border: none;
   border-top-right-radius: 2rem;

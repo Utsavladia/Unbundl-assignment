@@ -369,30 +369,30 @@
           </div>
         </div>
         <div class="book-section-right">
-          <div class="safety-protocol"> 
-            <div> 
-              <h1 class="">10x Safety Protocols</h1>
+          <div class="safety-protocol">
+            <div>
+              <h1 class>10x Safety Protocols</h1>
               <h3>Monitored by DORI</h3>
               <p>(Aritficial intellidnece System)</p>
               <h2 class="learn-more"><p>Learn More</p> <span> ➜ </span></h2>
             </div>
-            <img src="./images/peoples/safety-girl.png"/>
+            <img src="./images/peoples/safety-girl.png" />
           </div>
           <div class="book-locate">
             <div class="book1">
               <h1>450+ Neighbourhood</h1>
               <p>Clinics Pan India</p>
-              <img src="./images/clinic.png"/>
+              <img src="./images/clinic.png" />
               <h3 class="locate-clinic">Locate Clinic near you ➜</h3>
             </div>
             <div class="book2">
               <h1>1200+ Expert Doctors</h1>
               <p>Covering All Specialities</p>
-              <img src="./images/Gropu.png"/>
+              <img src="./images/Gropu.png" />
               <h3 class="locate-clinic">Explore Dentists Nearby ➜</h3>
 
             </div>
-         
+
           </div>
         </div>
       </section>
@@ -805,27 +805,45 @@
 
         <!-- Model open to Book Appointment by clicking button from Navbar  -->
         <section class="book-appointment-modal" id="book-appointment-modal">
-          <div class="book-appointment-content">
-            <h1 class="large-text-center">Book your consultation at Clove
-              Dental</h1>
-            <p>Please fill out the form below to book a consultation with Clove
-              Dental.</p>
-            <h2 class="orange-text medium-text">Step 1. Personal Details</h2>
-            <form class="book-appointment-form">
-              <input placeholder="Full Name" type="text" />
-              <input placeholder="Email" type="email" />
-              <input placeholder="Mobile" type="number" />
-              <div class="otp-input">
-                <input placeholder="OTP" class="otp-input" />
-                <button class="otp-varify">Varify</button>
+          <div class="book-appointment-content ">
+            <div class="step1">
+              <h1 class="large-text-center">Book your consultation at Clove
+                Dental</h1>
+              <p>Please fill out the form below to book a consultation with
+                Clove
+                Dental.</p>
+              <h2 class="orange-text medium-text">Step 1. Personal Details</h2>
+              <form class="book-appointment-form">
+                <input placeholder="Full Name" type="text" />
+                <input placeholder="Email" type="email" />
+                <input placeholder="Mobile" type="number" />
+                <div class="otp-input">
+                  <input placeholder="Enter OTP" />
+                  <button class="otp-varify">Verify</button>
+                </div>
+              </form>
+              <div class="book-appointment-form-button">
+                <button class="book-next-button">
+                  Next
+                </button>
               </div>
-            </form>
-            <div class="book-appointment-form-button">
-              <button>
-                Next
-              </button>
             </div>
-
+              <div class="step2">
+              <h2 class="orange-text medium-text">Step 2. Appointment Details</h2>
+              <form class="book-appointment-form">
+                <button>Select your city <img src="./images/icons/down.png"/></button>
+                <button> Select Clinic  <img src="./images/icons/down.png"/></button>
+                <button>Select Date & Time  <img src="./images/icons/down.png"/></button>
+                <button>Select Concern  <img src="./images/icons/down.png"/></button>
+              </form>
+              <a class="desclaimer-text">By Clicking submit, I hereby consent to receive communication from Clove Dental regarding <br/>
+my appointment and other dental services.</a>
+              <div class="book-appointment-form-button">
+                <button>
+                  Next
+                </button>
+              </div>
+            </div>
           </div>
 
         </section>
@@ -848,7 +866,7 @@
               <input placeholder="Official E-mail" type="email" />
               <input placeholder="Mobile" type="number" />
               <div class="otp-input">
-                <input placeholder="Enter OTP"  class="otp-input-input" />
+                <input placeholder="Enter OTP" class="otp-input-input" />
                 <button class="otp-varify">Varify</button>
               </div>
             </form>
@@ -868,13 +886,13 @@
             <input type="radio" name="slider" id="img-3">
             <div class="carousel-cards">
               <label class="carousel-card" for="img-1" id="carousel-1">
-                  <img src="./images/peoples/Frame 753.png" alt="img1">
+                <img src="./images/peoples/Frame 753.png" alt="img1">
               </label>
               <label class="carousel-card" for="img-2" id="carousel-2">
-                  <img src="./images/peoples/Rectangle 60.png" alt="img2">
+                <img src="./images/peoples/Rectangle 60.png" alt="img2">
               </label>
               <label class="carousel-card" for="img-3" id="carousel-3">
-                  <img src="./images/peoples/Frame 751.png" alt="img3">
+                <img src="./images/peoples/Frame 751.png" alt="img3">
               </label>
             </div>
             <p class="left-arrow-carousel">&lt;</p>
@@ -894,6 +912,8 @@
           }else{
             modal.style.display = 'flex'
           }
+          form1.style.display = 'flex'
+          form2.style.display = 'none'
         });
 
         window.addEventListener('click', function(event){
@@ -941,10 +961,19 @@
           })
         });
         window.addEventListener('click', (event) => {
-        if (event.target === carouselModal) {
-            carouselModal.style.display = 'none';
-        }
-    });
+          if (event.target === carouselModal) {
+              carouselModal.style.display = 'none';
+          }
+        });
+
+
+        const bookButton = document.querySelector('.book-next-button')
+        const form1 = document.querySelector('.step1');
+        const form2 = document.querySelector('.step2');
+        bookButton.addEventListener('click', function(){
+          form1.style.display = 'none';
+          form2.style.display = 'flex';
+        })
 
       </script>
     </body>
