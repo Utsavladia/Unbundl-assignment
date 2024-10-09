@@ -33,12 +33,17 @@ header {
   flex-grow: 1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: end;
+  /* position: relative; */
 }
 
-nav {
+.nav-div {
+  flex: 1;
   display: flex;
   align-items: center;
+  flex-direction: row;
+  justify-content: end;
+  gap: 2rem;
 }
 
 .logo img {
@@ -378,6 +383,7 @@ nav {
 
 .location-div {
   display: flex;
+  flex-direction: row;
   align-items: center;
   height: fit-content;
   justify-content: space-between;
@@ -385,7 +391,7 @@ nav {
 }
 
 .google-img {
-  width: 4rem;
+  height: 4rem;
   margin-right: 1rem;
 }
 
@@ -424,7 +430,7 @@ nav {
   margin-right: 0.5rem;
 }
 
-.ml-1 {
+.city-div {
   margin-left: 1rem;
   width: 17rem;
 }
@@ -1687,22 +1693,418 @@ input[type="radio"] {
   }
 }
 
+.nav-links-mobile {
+  position: absolute;
+  top: 120%;
+  right: -1rem;
+  display: none;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.google-div {
+  display: flex;
+  width: auto;
+  align-items: center;
+}
+
+.city-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-icon {
+  cursor: pointer;
+  width: 3rem;
+  height: auto;
+  gap: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 /* Media to define the smaller rem size for Mobile size */
 @media (max-width: 430px) {
-  html {
-    font-size: 5px;
+  .hero img {
+    height: auto;
+    width: 100vw;
   }
-}
-
-/* Media query to define the smallest rem size for smaller mobile screen sizes */
-@media (max-width: 330px) {
-  html {
-    font-size: 4px;
+  h2 {
+    font-size: 2rem;
   }
-}
+  .feature-img-section {
+    width: auto;
+  }
 
-@media (min-width: 1900px) {
-  html {
-    font-size: 24px;
+  .nav-div {
+    flex: 0;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: -5%;
+    width: 90vw;
+    z-index: 100;
+    gap: 2rem;
+    background-color: rgba(255, 241, 230, 1);
+    padding: 2rem 4rem;
+    align-items: center;
+    justify-content: start;
+    display: none;
+  }
+  .help-button {
+    font-size: 2rem;
+    gap: 1rem;
+  }
+  .book-icon {
+    width: 2rem;
+  }
+  .phone-icon {
+    width: 1.5rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .nav-links a {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .separator {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+    gap: 1rem;
+    z-index: 100;
+  }
+  .menu-icon span {
+    background-color: rgba(77, 44, 25, 1);
+    height: 0.5rem;
+    width: 100%;
+    display: block;
+    border-radius: 2px;
+    margin: 0.5rem 0rem;
+  }
+  .location-section {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    padding: 3rem 2rem;
+  }
+
+  .location-div {
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .google-div {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    justify-content: start;
+  }
+  .rating-div {
+    font-size: 1.5rem;
+  }
+  .star-img {
+    width: 2rem;
+  }
+  .google-ratings {
+    width: 10rem;
+  }
+  .small-text-rating {
+    font-size: 1rem;
+  }
+  .subtext-bold {
+    font-size: 1.5rem;
+  }
+
+  .rating-section {
+    padding-right: 0;
+    border-right: none;
+  }
+  .google-img {
+    height: 6rem;
+  }
+
+  .city-div {
+    padding: 1rem 0rem;
+    width: auto;
+    margin-left: 0;
+  }
+  .city-div button {
+    border-radius: 5rem;
+    margin: 1rem 0rem;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+  }
+
+  .city-button p {
+    font-size: 2rem;
+  }
+  .treatments-section {
+    padding: 2rem 1rem;
+  }
+  .treatments-div {
+    padding: 2rem;
+  }
+  .large-text-center {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
+
+  .treatments {
+    grid-template-columns: 1fr 1fr;
+  }
+  .treatment {
+    width: 15rem;
+    height: 15rem;
+  }
+  .treatment-img {
+    width: 4rem;
+  }
+  .treatment-text {
+    font-size: 1.5rem;
+  }
+  .treatment-img-larger {
+    width: 6rem;
+  }
+  .treatment-text-underline {
+    font-size: 1.8rem;
+    align-items: center;
+  }
+  .treatment-text-underline img {
+    width: 2rem;
+  }
+
+  .book-section {
+    padding: 3rem 1rem;
+    flex-direction: column;
+  }
+
+  .contact-now-div {
+    width: auto;
+    padding: 6rem 3rem;
+  }
+  .large-text {
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+  }
+  .form-group input {
+    font-size: 2rem;
+    width: auto;
+  }
+  .concern-button {
+    width: 26rem;
+    border-radius: 4rem;
+  }
+
+  .concern-button p {
+    font-size: 2rem;
+  }
+
+  .concern-options {
+    width: 23rem;
+    z-index: 100;
+  }
+  .concern-options div {
+    font-size: 1.8rem;
+  }
+  .city-options {
+    width: 24rem;
+  }
+
+  .city-options-div {
+    max-height: 20rem;
+  }
+  .orange-button.book {
+    width: 26rem;
+  }
+  .orange-button {
+    font-size: 1.8rem;
+  }
+
+  .book-section-right {
+    width: auto;
+  }
+  .Specialists-section {
+    grid-template-columns: 1fr;
+    padding: 3rem 0rem;
+  }
+  .specialist-left {
+    max-width: 100%;
+    width: auto;
+    padding: 1rem 4rem;
+  }
+  .specialist-data-row {
+    padding: 1rem 0rem;
+  }
+
+  .specialist-data-row img {
+    height: 5rem;
+  }
+  .medium-text-bold {
+    font-size: 2rem;
+  }
+  .specialist-right {
+    max-width: 100%;
+    width: auto;
+  }
+  .specialist-right button {
+    font-size: 2rem;
+  }
+  .scrolling-content-div img {
+    height: 3rem;
+  }
+  .scrolling-content-div p {
+    font-size: 1.2rem;
+  }
+  .feature-img-section {
+    padding: 4rem 1rem;
+  }
+  .feature-img-section img {
+    height: 20rem;
+  }
+  .blog-links {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+  }
+  .blogs-div {
+    padding: 4rem 1em;
+    grid-template-columns: 1fr;
+  }
+  .blog-card img {
+    width: 9rem;
+  }
+  .blog-card h2 {
+    font-size: 1.4rem;
+  }
+  .blog-card p {
+    font-size: 1.2rem;
+  }
+  .trust-section {
+    padding: 2rem;
+  }
+  .trust-div {
+    top: 90%;
+    padding: 3rem 1rem;
+    width: 100%;
+  }
+  .companies-div {
+    width: 100%;
+  }
+  .trust-div button {
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+  .register-company {
+    margin-top: 2rem;
+  }
+  .register-company h4 {
+    font-size: 1.5rem;
+  }
+  .register-company img {
+    width: 1.5rem;
+  }
+  .beyond-dentistry {
+    padding: 4rem 2rem;
+  }
+  .beyond-dentistry p {
+    font-size: 1.5rem;
+  }
+  .beyond-div {
+    grid-template-columns: 1fr 1fr;
+    padding: 4rem 2rem;
+  }
+  .beyond-card {
+    font-size: 1rem;
+  }
+  .faq-section {
+    padding: 2rem 2rem 4rem 2rem;
+  }
+  .faq-div {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .faq h3 {
+    font-size: 1.5rem;
+    width: 85%;
+  }
+  .faq img {
+    width: 1.2rem;
+  }
+  footer {
+    padding: 4rem 2rem;
+  }
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .footer-content h2 {
+    font-size: 2rem;
+  }
+  .footer-content li {
+    font-size: 1.5rem;
+  }
+  .footer-img {
+    margin-top: 3rem;
+  }
+  .footer-img img {
+    width: 60%;
+  }
+  .treatment-link:hover .treatment-dropdown-container {
+    display: flex;
+  }
+  .treatment-dropdown-container {
+    display: none;
+    top: 100%;
+    padding-top: 1rem;
+    left: -100%;
+  }
+  .treatment-dropdown-container.active {
+    display: flex;
+  }
+  .treatment-dropdown {
+    width: 80vw;
+    grid-template-columns: 1fr 1fr;
+    z-index: 200;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  .book-appointment-form {
+    grid-template-columns: 1fr;
+  }
+  .book-appointment-form input {
+    font-size: 1.5rem;
+  }
+  .otp-varify {
+    font-size: 1.5rem;
+    width: 10rem;
+  }
+  .book-appointment-form-button button {
+    font-size: 1.5rem;
+  }
+  .step2 form {
+    grid-template-columns: 1fr;
+  }
+  .step2 button {
+    font-size: 1.5rem;
+  }
+  .desclaimer-text {
+    font-size: 1.2rem;
   }
 }
