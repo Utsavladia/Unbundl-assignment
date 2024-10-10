@@ -2073,7 +2073,9 @@ a {
     display: none;
     top: 100%;
     padding-top: 1rem;
-    left: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 400;
   }
   .treatment-dropdown-container.active {
     display: flex;
@@ -2106,5 +2108,10 @@ a {
   }
   .desclaimer-text {
     font-size: 1.2rem;
+  }
+  .help-dropdown {
+    top: -10%;
+    transform: translateY(-100%);
+    right: -40%;
   }
 }
